@@ -20,7 +20,23 @@ $.getJSON("entries.json", function(data) {
     // The marker, positioned at Greece
     var marker = new google.maps.Marker({position: greece, map: map});
   }); */
-  
+
+  $('#search').keyup(function() {
+
+    var empty = false;
+    $('#search').each(function() {
+        if ($(this).val() == '') {
+            empty = true;
+        }
+    });
+
+    if (empty) {
+        $('.open').attr('disabled', true);
+    } else {
+        $('.open').attr('disabled', false);
+    }
+});
+
  $(".open").on("click", function(){
     $(".popup, .popup-content").addClass("active");
     });
