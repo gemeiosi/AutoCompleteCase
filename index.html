@@ -13,6 +13,9 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Jquery Ui CSS -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet">
 
@@ -20,10 +23,10 @@
 
 <body>
 
-  <div class="d-flex m-3" id="wrapper">
+  <div class="d-lg-flex m-3" id="wrapper">
 
     <!-- Sidebar -->
-    <div class="bg-light border-right d-flex align-items-end" id="sidebar-wrapper">
+    <div class="border d-lg-flex align-items-lg-end" id="sidebar-wrapper">
       <div class="sidebar-heading"></div>
       <div class="list-group list-group-flush">
           <p>Banner Space</p>
@@ -36,27 +39,53 @@
       
   
     <!-- Page Content -->
-      <div class="d-flex m-3">
+      <div class="d-lg-flex m-3-lg align-items-sm-center justify-content-sm-center">
         <img class="m-3" id="logo" src="images/xeClassic.png" alt="logo">
-        <div class="d-flex m-4">
+        <div class="d-lg-flex m-4-lg">
           <div class="mx-auto justify-content-center">
-          <h5 class="m-2">What place are you looking for?</h5>
-          <div id="search_bar" class="d-flex align-items-center">
+          <h5 class="m-2-lg">What place are you looking for?</h5>
+          <div id="search_bar" class="d-flex align-items-lg-center">
               <label class="p-1" for="search">Search:</label>
               <input class="p-1" id="search" type="text" />
           </div>
+          <button class="open btn btn-primary d-sm-flex align-items-sm-center" disabled="disabled" >Click to search</button>
         </div>
         </div>
+          <!--Creates the popup body-->
+          <div class="popup-overlay">
+          <!--Creates the popup content-->
+          <div class="popup-content">
+              <h2>Results</h2>
+              <p>Something Is Wrong With The Maps</p>
+            <!--popup's close button-->
+              <button class="close">Close</button>    
+          </div>
+  </div>
       </div>
 
   <!-- /#wrapper -->
   </div>
+  <div id="map"></div>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="scripts/script.js"></script>
 
+  <!-- Jquery UI -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <!-- Google Maps Script -->
+  <!--<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVYWpjmyYeotnlU0riHdoqg9H8vKU36Mk&callback=initMap"></script>
+  
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+  <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+  -->
+
+    <!-- Custom JavaScript -->
+  <script src="scripts/script.js"></script>
 
 </body>
 

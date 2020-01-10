@@ -50,7 +50,59 @@ body {
   width: 90%;
 }
 
-@media (min-width: 768px) {
+.btn-primary{
+  background-color: #ffb800;
+  border-color: #ffb800;
+  color:black;
+}
+
+.btn-primary:hover{
+  background-color: #ffb820;
+  border-color: #ffb800;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem #ffb800;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+  background-color: #ffb800;
+  border-color: #ffb800;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #ffb800;
+  border-color: #ffb800;
+}
+
+.popup-overlay {
+  /*Hides pop-up when there is no "active" class*/
+  visibility: hidden;
+  position: absolute;
+  background: #ffffff;
+  border: 3px solid #666666;
+  width: 60%;
+  height: 60%;
+  left: 33%;
+}
+
+.popup-overlay.active{
+visibility:visible;
+}
+  
+.popup-content.active {
+visibility:visible;
+}
+
+#map{
+  width: 60%;
+  height: 400px;
+}
+
+@media (min-width: 1280px) {
   #sidebar-wrapper {
     margin-left: 0;
   }
@@ -63,4 +115,25 @@ body {
   #wrapper.toggled #sidebar-wrapper {
     margin-left: -15rem;
   }
+}
+
+  @media (min-width: 1024px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+  
+    #wrapper.toggled #sidebar-wrapper {
+      margin-left: -15rem;
+    }
+  }
+
+@media (max-width: 578px) {
+  #sidebar-wrapper{
+    display: none;
+    min-height: 0;
+  }
+
+  #search_bar {
+    width: 100vw;
+}
 }
